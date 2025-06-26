@@ -1,0 +1,94 @@
+@import '../variables';
+
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.popupContent {
+  background-color: white;
+  padding: $spacing-lg;
+  border-radius: $border-radius-md;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: $shadow-lg;
+  text-align: center;
+  animation: slideUp 0.3s ease-out;
+
+  h3 {
+    color: $primary-color;
+    margin-bottom: $spacing-md;
+    font-size: 2rem;
+  }
+
+  p {
+    color: $text-color;
+    margin-bottom: $spacing-lg;
+    line-height: 1.6;
+  }
+}
+
+.closeButton {
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $border-radius-sm;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  margin-top: $spacing-md;
+
+  &:hover {
+    background-color: $primary-dark;
+  }
+}
+
+.popupContent {
+  .success {
+    color: $success-color;
+  }
+}
+
+.popupContent {
+  .error {
+    color: $error-color;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .popupContent {
+    padding: $spacing-md;
+    width: 95%;
+
+    h3 {
+      font-size: 1.8rem;
+    }
+  }
+}

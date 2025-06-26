@@ -1,0 +1,77 @@
+@import '../variables';
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+}
+
+.hero {
+  background-color: $primary-color;
+  color: white;
+  padding: 8rem 0;
+  text-align: center;
+
+  h1 {
+    font-size: 3.2rem;
+    margin-bottom: $spacing-sm;
+  }
+
+  p {
+    font-size: 1.8rem;
+    opacity: 0.9;
+  }
+}
+
+.header {
+  background-color: $primary-color;
+  color: white;
+  padding: $spacing-md 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: $shadow-sm;
+
+  &Content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .cartIndicator {
+    background-color: $primary-color;
+    color: white;
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $border-radius-sm;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $primary-dark;
+    }
+  }
+}
+
+.footer {
+  background-color: $primary-color;
+  color: white;
+  padding: $spacing-lg 0;
+  text-align: center;
+  margin-top: auto;
+
+  p {
+    opacity: 0.8;
+    font-size: 1.4rem;
+  }
+}

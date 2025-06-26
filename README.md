@@ -15,7 +15,7 @@
 ## 🚀 Как запустить
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/Narek0011/ecommerce-store.git
 cd ecommerce-store
 npm install
 npm run dev
