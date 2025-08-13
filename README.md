@@ -13,7 +13,6 @@
 - [x] Обработка длинных названий товара
 
 ## 🚀 Как запустить
-## 🚀 Как запустить
 
 ```bash
 git clone https://github.com/Narek0011/ecommerce-store.git
